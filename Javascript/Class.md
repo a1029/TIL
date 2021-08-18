@@ -54,3 +54,4 @@
 
 ### 표준 빌트인 생성자 함수 확장
 - Array, String과 같은 표준 빌트인 생성자 함수를 상속하고, 이 표준 빌트인 생성자 함수의 프로토타입 메서드를 호출하면 이 메서드는 상속한 클래스의 인스턴스를 반환
+- `class MyArray extends Array`, `MyArray.filter()` => MyArray 인스턴스가 리턴되서 메서드 체이닝이 가능해짐
