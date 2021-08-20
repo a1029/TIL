@@ -37,7 +37,7 @@
 ## 템플릿 엔진
 - 자바스크립트를 사용해서 HTML을 렌더링
 - pug, nunjucks
-- React.js, Vue.js와의 차이점?
+- React.js, Vue.js와 같은 웹 프레임워크와의 차이점?
 
 ### nunjucks
 - 모질라에서 개발
