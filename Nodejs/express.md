@@ -14,8 +14,9 @@
 
 # 미들웨어
 - 익스프레스의 핵심
-- 요청과 응답의 중간에 위치하여 여러가지 역할
-- `app.use` 또는 `app.get`에서 미들웨어를 인수로 추가
+- 요청과 응답의 중간에 위치
+- 요청과 응답을 조작, 기능 추가, 필터링 등
+- 보통 `app.use`로 연결, `app.get`, `app.post`에서도 가능
 
 ## 미들웨어 패키지들
 - morgan
@@ -27,11 +28,11 @@
 
 # Router
 - app.js 코드가 길어지는 것을 막기 위해 라우터를 따로 분리
-- `const router = express.Router()`, `router.get()`
+- `const router = express.Router()`, `router.get('/', ...)`
 - app.js에서는 `app.use`로 라우터 연결
 - `next('route')` : 다음 미들웨어를 실행하지 않고 다음 라우터로 이동
 - 라우트 매개변수
-- `router.route`로 메소드를 합칠 수 있음
+- `router.route`로 요청 메소드 처리 함수를 합칠 수 있음
 
 ## 템플릿 엔진
 - 자바스크립트를 사용해서 HTML을 렌더링
