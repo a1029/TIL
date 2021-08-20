@@ -44,4 +44,4 @@
 - HTML 문법을 그대로 사용하되 추가로 자바스크립트 문법 사용
 - 확장자는 html 또는 njk
 - 변수, 반복문, 조건문, include, extends/block 
-- 렌더링시 `res.render('index')` // index.html
+- 렌더링시 `res.render('index') // index.html`
