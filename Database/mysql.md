@@ -19,3 +19,17 @@
 ## Engine
 - MyISAM
 - InnoDB
+
+
+# Nodejs에서 mysql 사용하기
+- 시퀄라이즈(Sequelize)
+
+## Sequlize
+- ORM
+- 자바스크립트 객체와 데이터베이스의 릴레이션을 매핑
+- MariaDB, PostgreSQL 등 다른 데이터베이스도 가능
+- 자바스크립트 구문을 알아서 SQL로 변환
+
+## Sequlize-모델 정의하기
+- MySQL에서 정의한 테이블을 시퀄라이즈에서도 정의
+- 시퀄라이즈는 모델과 MySQL의 테이블을 연결해주는 역할
