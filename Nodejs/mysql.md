@@ -48,7 +48,7 @@
 
 ### part7 예제 기본 구조
 - /models : 시퀄라이즈 모델 정의, MySQL과 매핑
-- /public : 이벤트 호출에 따른 AJAX 처리
+- /public : 이벤트 발생에 따른 AJAX 처리
 - /routes : 주소 라우팅 역할
 - /views : html 정적파일 모음
 - 주소가 요청되면 routes에서 API호출 => 결과를 public으로 리턴, 리턴된 값으로 홈페이지 그리기
