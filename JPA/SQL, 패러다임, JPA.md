@@ -53,7 +53,7 @@ JPA는 이런 복잡한 문제를 간단히 해결할 수 있게 해줌
 - JPA는 자바 ORM에 기술에 대한 표준 API 명세
 - 이 API 명세를 구현한 프레임워크들.. Hibernate, EclipseLink, DataNuclues
 
-## JPA를 사용해야 하는 이유, 권장 ㅋ
+## JPA를 사용해야 하는 이유, 권장
 - 생산성
 - 유지보수
 - 패러다임의 불일치 해결
