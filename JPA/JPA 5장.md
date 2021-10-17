@@ -36,7 +36,7 @@
     A.b, B.a
     ```
 -   객체 관계 매핑
-    ![2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/42bedc6a-94af-4969-a6bd-a0c7e77e4c9a/2.png)
+    ![2](https://user-images.githubusercontent.com/15135565/137611167-1eab0ebe-a9d4-44b6-9c6f-8aa2a275f9a2.png)
 
     ```java
     @Entity
@@ -119,7 +119,7 @@
 
 ## 양방향 연관관계
 
-![3.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1f82fc3d-c443-4006-b5cf-c9fbe0f6a10a/3.png)
+![3](https://user-images.githubusercontent.com/15135565/137611173-a6b19fb9-ff6a-488b-90ae-36475eed4b15.png)
 
 -   객체 관계 매핑
 
@@ -147,7 +147,8 @@
 -   따라서 두 엔티티 객체 중 하나를 정해서 테이블의 외래키를 관리, 이를 연관관계의 주인
 -   연관관계의 주인만이 외래 키를 관리할 수 있음
 
-![4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9eed2eb3-2979-4478-9a9d-7d02ffcdddc0/4.png)
+![4](https://user-images.githubusercontent.com/15135565/137611183-2e4cca70-1e7c-40a0-b5da-510b8dc40dd8.png)
+
 
 -   TEAM_ID 외래키를 Member.team으로 가지고 있는 Member 엔티티가 연관관계의 주인
 -   Team 엔티티는 주인이 될 수 없음
@@ -213,7 +214,7 @@ team1.getMembers().add(member1); // 주인이 아닌 곳에서 연관관계 설�
     ```
 
 -   연관관계 편의 메소드 주의사항
-    ![5.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c999991-8801-4585-9647-6a6b21666260/5.png)
+    ![5](https://user-images.githubusercontent.com/15135565/137611190-5b6a9cd9-1f7d-465b-b147-2378b14e97ae.png)
 
     ```java
     @Entity
