@@ -10,7 +10,7 @@
 ## 다대일
 
 -   다대일 단방향
-    ![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/636f15cf-0b41-4795-a984-e7a667389f5c/1.png)
+    ![1](https://user-images.githubusercontent.com/15135565/137611257-bf12688e-fc38-41a2-9188-ac5bebd7d941.png)
 
     -   회원은 Member.team으로 팀 엔티티 참조 가능
     -   팀에는 회원을 참조하는 필드가 없음
@@ -40,7 +40,7 @@
     ```
 
 -   다대일 양방향
-    ![2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0821a0e7-2c9e-4f9e-9170-f31325f9f0dc/2.png)
+    ![2](https://user-images.githubusercontent.com/15135565/137611352-cae7ddbd-c6ba-48c3-8105-b6b4d01ce2c8.png)
 
     -   팀에도 회원을 참조하는 members 필드가 있음
     -   양방향은 외래 키가 있는 쪽이 연관관계의 주인
@@ -93,7 +93,7 @@
 ## 일대다
 
 -   일대다 단방향
-    ![6.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/15d5ca8a-f8af-4c85-a6a6-a0ac9ac78a41/6.png)
+    <img width="944" alt="3" src="https://user-images.githubusercontent.com/15135565/137611264-36cb7546-356f-410e-a217-84f4e080c39e.png">
 
     -   Team 엔티티가 MEMBER 테이블의 외래키를 관리한다.
     -   Member 엔티티에 외래 키를 매핑할 수 있는 참조 필드가 없기 때문
@@ -156,7 +156,8 @@
     -   존재하지 않음, 다대일 양방향 매핑 사용해야 함
     -   완전히 불가능한 건 아님. 속임수로 사용 가능
     -   일대다 단방향 매핑 반대편에 다대일 단방향 매핑을 추가
-        ![3.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9c37aa18-2182-4063-8793-213d46687c1d/3.png)
+        <img width="990" alt="4" src="https://user-images.githubusercontent.com/15135565/137611270-a909a3b6-c206-468a-b22a-50b734c5354d.png">
+
 
     ```java
     @Entity
@@ -187,9 +188,9 @@
     -   주 테이블인 MEMBER가 LOCKER_ID 외래키를 가짐
     -   주 엔티티인 Member 안에서 외래키 매핑
     -   단방향
-        ![4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b04edfc-0f9b-4932-8ccc-f2a2ba8438c1/4.png)
+        ![5](https://user-images.githubusercontent.com/15135565/137611282-0a2760ed-5160-4b61-ab6a-92f0b20283ad.png)
     -   양방향
-        ![7.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8c706b49-c9ad-4d1b-8559-8bb84352ec04/7.png)
+        <img width="946" alt="6" src="https://user-images.githubusercontent.com/15135565/137611285-077cb3f9-4839-498e-881f-f50059284fde.png">
 
         ```java
         @Entity
@@ -223,10 +224,12 @@
     -   대상 엔티티인 Locker 안에서 외래키 매핑
     -   단방향
         -   일대일 관계 중 대상 테이블에 외래 키가 있는 단방향 관계는 JPA에서 지원 X
-            ![8.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/839606c6-e874-469b-8c08-8d3e3641b4f9/8.png)
+            ![7](https://user-images.githubusercontent.com/15135565/137611289-f3ae89c1-2834-4a79-a0b5-eb2431c46de5.png)
+
         -   단방향 관계를 Locker에서 Member 방향으로 수정하거나, 양방향 관계로 만들고 Locker를 연관관계의 주인으로 설정해야 함
     -   양방향
-        ![9.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/10d1e877-7212-4bea-8466-9eee9b52fe28/9.png)
+        <img width="888" alt="8" src="https://user-images.githubusercontent.com/15135565/137611291-68623deb-0a01-49db-9493-6a8d509bdbb4.png">
+
 
         ```java
         public class Member{
@@ -251,9 +254,9 @@
 
 -   데이터베이스는 정규화된 테이블 2개로 다대다 관계를 표현할 수 없음
 -   일대다, 다대일 관계로 풀어내는 연결 테이블 사용
-    ![10.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d404db9f-9d8b-4654-9d6e-39acb612c746/10.png)
+    <img width="995" alt="9" src="https://user-images.githubusercontent.com/15135565/137611293-565bb285-bd8c-49c6-ae70-14cd628478f9.png">
 -   객체는 연결객체가 필요없음. 객체 2개로 다대다 관계 가능, (컬렉션이 있으므로)
-    ![11.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7718ea20-ebaf-4732-8ddf-4dee1eefb286/11.png)
+    ![10](https://user-images.githubusercontent.com/15135565/137611296-d29fe761-929a-460d-890d-f5fa8e9648ef.png)
 -   다대다 단방향
 
     ```java
@@ -305,11 +308,11 @@
 -   연결 엔티티 사용 (복합키)
 
     -   연결 테이블에 주문 수량 컬럼, 주문한 날짜 등 컬럼이 더 필요할 수 있음
-        ![12.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/332ddc15-5d07-4d88-ad04-7e4f80924518/12.png)
+        <img width="1208" alt="11" src="https://user-images.githubusercontent.com/15135565/137611322-73000bfa-df5c-4cbc-b714-b86b62a3f83a.png">
     -   컬럼이 추가되면 더이상 @ManyToMany는 사용할 수가 없음, 주문 엔티티나 상품 엔티티에는 추가한 컬럼들을 매핑할 수가 없기 때문
     -   연결 테이블을 만든 것처럼 연결 엔티티를 만들고 이곳에 추가한 컬럼들을 매핑
     -   그리고 엔티티 간의 관계도 테이블 관계처럼 다대다에서 일대다, 다대일 관계로 풀어야 함-
-        ![14.jpg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e36198f8-f525-4e94-a283-068f42aa0812/14.jpg)
+        ![12](https://user-images.githubusercontent.com/15135565/137611325-e0bbd212-7577-4b97-a5c3-55f9ed50f591.jpg)
     -   상품에서 회원상품으로 객체 그래프 탐색 기능이 필요하지 않다고 판단해서 상품 엔티티는 회원 상품 엔티티와 연관관계를 맺지 않음
         ```java
         public class Member{
@@ -382,7 +385,7 @@
 
     -   복합키 전략은 사용이 복잡했다.
     -   데이터베이스에서 자동 생성해주는 대리키를 연관관계 테이블의 새로운 기본키로 설정하는 방법을 권장한다.
-        ![14.PNG](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2bb9e38c-1f40-4108-92ce-e7046c1adcd5/14.png)
+        ![13](https://user-images.githubusercontent.com/15135565/137611330-95795dd3-d7aa-4e14-afdb-ceffabde8be1.png)
     -   매핑이 더 단순하고 이해가 쉬워졌다. 회원 엔티티와 상품 엔티티는 변경사항이 없다.
 
         ```java
