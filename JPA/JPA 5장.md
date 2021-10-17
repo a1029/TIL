@@ -9,7 +9,7 @@
 
 ## 단방향 연관관계
 
-![1.png](./1.png)
+<img width="650" alt="1" src="https://user-images.githubusercontent.com/15135565/137611407-7cb322c7-f989-4b05-b2b1-b2d7d979880b.png">
 
 -   객체 연관관계 : 단방향
 -   테이블 연관관계 : 양방향
