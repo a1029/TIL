@@ -10,6 +10,7 @@
 ## 다대일
 
 -   다대일 단방향
+
     ![1](https://user-images.githubusercontent.com/15135565/137611257-bf12688e-fc38-41a2-9188-ac5bebd7d941.png)
 
     -   회원은 Member.team으로 팀 엔티티 참조 가능
@@ -40,6 +41,7 @@
     ```
 
 -   다대일 양방향
+
     ![2](https://user-images.githubusercontent.com/15135565/137611352-cae7ddbd-c6ba-48c3-8105-b6b4d01ce2c8.png)
 
     -   팀에도 회원을 참조하는 members 필드가 있음
@@ -93,6 +95,7 @@
 ## 일대다
 
 -   일대다 단방향
+
     <img width="944" alt="3" src="https://user-images.githubusercontent.com/15135565/137611264-36cb7546-356f-410e-a217-84f4e080c39e.png">
 
     -   Team 엔티티가 MEMBER 테이블의 외래키를 관리한다.
@@ -156,19 +159,19 @@
     -   존재하지 않음, 다대일 양방향 매핑 사용해야 함
     -   완전히 불가능한 건 아님. 속임수로 사용 가능
     -   일대다 단방향 매핑 반대편에 다대일 단방향 매핑을 추가
+
         <img width="990" alt="4" src="https://user-images.githubusercontent.com/15135565/137611270-a909a3b6-c206-468a-b22a-50b734c5354d.png">
 
+        ```java
+        @Entity
+        public class Member {
+            ...
 
-    ```java
-    @Entity
-    public class Member {
-    	...
-
-    	@ManyToOne
-    	@JoinColumn(name="TEAM_ID", insertable=false, updatable=false)
-    	private Team team;
-    }
-    ```
+            @ManyToOne
+            @JoinColumn(name="TEAM_ID", insertable=false, updatable=false)
+            private Team team;
+        }
+        ```
 
     -   다만 이렇게하면 둘다 같은 키를 관리하므로 문제가 발생할 수 있어, 읽기 속성으로 설정
 
@@ -188,8 +191,11 @@
     -   주 테이블인 MEMBER가 LOCKER_ID 외래키를 가짐
     -   주 엔티티인 Member 안에서 외래키 매핑
     -   단방향
+
         ![5](https://user-images.githubusercontent.com/15135565/137611282-0a2760ed-5160-4b61-ab6a-92f0b20283ad.png)
+
     -   양방향
+
         <img width="946" alt="6" src="https://user-images.githubusercontent.com/15135565/137611285-077cb3f9-4839-498e-881f-f50059284fde.png">
 
         ```java
@@ -223,13 +229,15 @@
     -   대상 테이블인 LOCKER가 MEMBER_ID 외래키를 가짐
     -   대상 엔티티인 Locker 안에서 외래키 매핑
     -   단방향
+
         -   일대일 관계 중 대상 테이블에 외래 키가 있는 단방향 관계는 JPA에서 지원 X
             ![7](https://user-images.githubusercontent.com/15135565/137611289-f3ae89c1-2834-4a79-a0b5-eb2431c46de5.png)
 
         -   단방향 관계를 Locker에서 Member 방향으로 수정하거나, 양방향 관계로 만들고 Locker를 연관관계의 주인으로 설정해야 함
-    -   양방향
-        <img width="888" alt="8" src="https://user-images.githubusercontent.com/15135565/137611291-68623deb-0a01-49db-9493-6a8d509bdbb4.png">
 
+    -   양방향
+
+        <img width="888" alt="8" src="https://user-images.githubusercontent.com/15135565/137611291-68623deb-0a01-49db-9493-6a8d509bdbb4.png">
 
         ```java
         public class Member{
@@ -254,9 +262,13 @@
 
 -   데이터베이스는 정규화된 테이블 2개로 다대다 관계를 표현할 수 없음
 -   일대다, 다대일 관계로 풀어내는 연결 테이블 사용
+
     <img width="995" alt="9" src="https://user-images.githubusercontent.com/15135565/137611293-565bb285-bd8c-49c6-ae70-14cd628478f9.png">
+
 -   객체는 연결객체가 필요없음. 객체 2개로 다대다 관계 가능, (컬렉션이 있으므로)
+
     ![10](https://user-images.githubusercontent.com/15135565/137611296-d29fe761-929a-460d-890d-f5fa8e9648ef.png)
+
 -   다대다 단방향
 
     ```java
