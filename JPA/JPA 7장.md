@@ -11,7 +11,7 @@
 
 ### 1) 조인 전략
 
-![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef7c9e8a-4f75-48c1-a199-c5745a94e660/1.png)
+![1](https://user-images.githubusercontent.com/15135565/138592959-13d5c815-b9a1-4197-b64c-96c208ee6463.png)
 
 -   엔티티 각각을 모두 테이블로 만듬
 -   자식 테이블이 부모 테이블의 기본 키를 받아서 기본 키 + 외래 키로 사용
@@ -61,7 +61,8 @@
 
 ### 2) 단일 테이블 전략
 
-![2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/148112c0-f2c9-4826-b217-e7c90727ce25/2.png)
+<img width="1055" alt="2" src="https://user-images.githubusercontent.com/15135565/138592970-9d777692-07a7-4207-84a2-3a9f5217b305.png">
+
 
 -   테이블 하나만 사용
 -   구분 컬럼을 꼭 사용
@@ -92,7 +93,7 @@
 
 ### 3) 구현 클래스마다 테이블 전략
 
-![3.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a702b3d6-5cae-437f-b32a-5762602a7216/3.png)
+<img width="1217" alt="3" src="https://user-images.githubusercontent.com/15135565/138592975-ec91702a-2fe7-476b-9242-a5c447719964.png">
 
 -   조인 전략과 비슷하나 부모 테이블이 없고 부모 테이블의 컬럼을 자식들이 모두 가지고 있음
 -   데이터베이스 설계자와 ORM 전문가 둘 다 추천하지 않음
@@ -123,9 +124,9 @@
 
 ## 2. @MappedSuperclass
 
-![4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0965564-b18a-45e1-9b11-34d9114b349f/4.png)
+<img width="877" alt="4" src="https://user-images.githubusercontent.com/15135565/138592979-51fb96ba-cdc4-41d0-af35-07250d5b6e0b.png">
 
-![5.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59eec22a-1712-46dd-8a3e-b9e7cb497216/5.png)
+<img width="1152" alt="5" src="https://user-images.githubusercontent.com/15135565/138592985-08b2845a-3313-43c9-b44b-ca55410fced1.png">
 
 -   부모 클래스는 테이블과 매핑하지 않고 부모 클래스를 상속받는 자식 클래스에게 매핑 정보만 제공하고 싶을 때 사용
 -   엔티티는 있지만 테이블은 생성되지 않음
@@ -157,13 +158,13 @@
 
 ### 1) 식별관계
 
-![6.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b8cbda1-4d68-4425-a664-49de81636ae6/6.png)
+![6](https://user-images.githubusercontent.com/15135565/138592988-eb6d2b81-9f36-41b1-9497-f22d521969dd.png)
 
 -   부모 테이블의 기본 키를 자식 테이블의 기본 키 + 외래 키로 사용하는 관계
 
 ### 2) 비식별 관계
 
-![7.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60032369-ae87-4778-b7b8-6fb2117d634b/7.png)
+![7](https://user-images.githubusercontent.com/15135565/138592991-d820789d-48b9-48e8-8585-44b45af7a115.png)
 
 -   부모 테이블의 기본 키를 자식 테이블의 외래키로만 사용하는 관계
 -   필수적 비식별 관계 : 외래 키에 NULL을 허용하지 않음, 연관관계 맺음 필수
@@ -171,7 +172,7 @@
 
 ### (1) 복합 키 : 비식별 관계 매핑
 
-![8.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4f560559-95fe-4ec8-9ace-49a03e094ee1/8.png)
+![8](https://user-images.githubusercontent.com/15135565/138592994-a587ee32-fcf9-4b33-bc0d-fb97d88fe8bc.png)
 
 -   식별자를 둘 이상 사용하려면 별도 식별자 클래스 필요
 -   식별자 클래스의 속성명과 엔티티 사용하는 식별자의 속성명이 같아야 함
@@ -287,7 +288,7 @@
 
 ### (2) 복합 키 : 식별 관계 매핑
 
-![9.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c6a9fad3-5ac1-4297-bf59-b548be72b9dc/9.png)
+![9](https://user-images.githubusercontent.com/15135565/138593000-b7b81a43-e144-4cf4-91a8-8db61b0674a2.png)
 
 -   부모부터 손자까지 계속해서 기본 키를 전달
 -   `@IdClass`
@@ -426,7 +427,7 @@
 
 ### (3) 식별 관계를 비식별 관계로 변경
 
-![10.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a3bd3f3-7bbf-4407-89dd-0c703a866f2e/10.png)
+![10](https://user-images.githubusercontent.com/15135565/138593004-a21d69be-6a19-432e-b564-e33d3a3c89f9.png)
 
 -   코드
 
@@ -472,7 +473,7 @@
 
 ### (4) 일대일 식별 관계
 
-![11.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a3b8ff38-4358-43c7-a08b-3c8a9be24174/11.png)
+![11](https://user-images.githubusercontent.com/15135565/138593008-7fad24b5-cd0e-43cc-9a7d-49f80297f635.png)
 
 -   자식 테이블의 기본 키 값으로 부모 테이블의 기본 키 값만 사용
 -   부모 테이블의 기본 키가 복합키가 아니면 자식 테이블도 복합 키로 구성하지 않아도 됨
@@ -543,15 +544,15 @@
 -   조인 컬럼 사용(외래 키), `@JoinColumn`
 -   조인 테이블 사용(테이블), `@JoinTable`
 
-![12.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/215491ec-d1ad-4dcf-83d7-15f21b09bb51/12.png)
+![12](https://user-images.githubusercontent.com/15135565/138593017-467dcb7a-ed22-4a6e-afef-ea80327f07b0.png)
 
 ### ===============================================
 
-![13.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/09a692a8-171a-4f96-bfe5-d24f85d4f73b/13.png)
+![13](https://user-images.githubusercontent.com/15135565/138593020-af287837-7461-4d75-8ffc-7bc4303e0329.png)
 
 ### (1) 일대일 조인 테이블
 
-![14.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8ce093b8-5625-4cfc-b8c0-b6748f586d4a/14.png)
+![14](https://user-images.githubusercontent.com/15135565/138593023-00754859-434c-4fee-8a86-9fbceaed322b.png)
 
 -   코드
 
@@ -592,7 +593,7 @@
 
 ### (2)일대다 조인 테이블
 
-![15.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a4b5f61-7cfb-45b0-92a3-deafb1bc4762/15.png)
+![15](https://user-images.githubusercontent.com/15135565/138593027-3206c05f-80d5-4c83-8164-14a1631aba6c.png)
 
 -   코드
 
@@ -662,7 +663,7 @@
 
 ### (4) 다대다 조인 테이블
 
-![16.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/49a015ff-fc0d-48d0-b8fc-d37f561de7fe/16.png)
+![16](https://user-images.githubusercontent.com/15135565/138593030-75690ead-d9f5-4703-8b1f-a19cad0243c3.png)
 
 -   코드
 
@@ -698,7 +699,7 @@
 
 ## 5. 엔티티 하나에 여러 테이블 매핑
 
-![17.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0094b131-a414-45ee-bfdf-ad6a18734dd3/17.png)
+![17](https://user-images.githubusercontent.com/15135565/138593032-e0c0e1a5-58ec-481b-8e47-b00b245b67da.png)
 
 -   코드
 
