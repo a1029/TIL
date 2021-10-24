@@ -14,14 +14,14 @@
 -   회원 엔티티와 팀 엔티티는 연관관계
 -   회원의 정보만 사용하고 팀의 정보는 필요하지 않을 때
 
-![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/55e6fe9e-6c20-4d41-a4fe-15f969e18a57/1.png)
+![1](https://user-images.githubusercontent.com/15135565/138593074-ea7826fb-956e-441e-acff-8956f5b0e874.png)
 
 -   데이터베이스를 조회하지 않고 실제 엔티티 객체도 생성하지 않음
 -   데이터베이스 접근을 위임한 프록시 객체를 반환
 
-![2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d9eb78f1-c5e1-4abe-be7e-3ac093f346ae/2.png)
+![2](https://user-images.githubusercontent.com/15135565/138593077-d53e8c42-86af-41fc-9178-c6a5ed896114.png)
 
-![3.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c33d7903-c50b-4e1e-8612-dafef920e3df/3.png)
+![3](https://user-images.githubusercontent.com/15135565/138593081-c6690329-d5a0-4101-95bb-0843647f392b.png)
 
 -   프록시 클래스는 실제 클래스를 상속, 겉모양이 같음
 -   실제 객체에 대한 참조(target)를 보관
@@ -77,7 +77,7 @@
 
 ### 1) 즉시 로딩
 
-![4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a9814059-a4b5-4fd4-9305-983c5777fd76/4.png)
+![4](https://user-images.githubusercontent.com/15135565/138593083-e3dab8ba-058c-4315-af43-f23c6fb2a162.png)
 
 -   엔티티를 조회할 때 연관된 엔티티도 함께 조회
 -   즉시 로딩
@@ -113,7 +113,7 @@
 
 ### 2) 지연 로딩
 
-![5.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8d110ada-0b2f-4b66-874e-5635cc6a345b/5.png)
+![5](https://user-images.githubusercontent.com/15135565/138593088-4d1b36ef-0a2d-41c6-9a62-eee6a94a38b4.png)
 
 -   연관된 엔티티를 실제 사용할 때 조회
 -   지연 로딩
@@ -147,7 +147,7 @@
 
 ## 3. 지연 로딩 활용
 
-![6.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e5b37e86-44a7-4314-bdb7-d72cca5f71e4/6.png)
+![6](https://user-images.githubusercontent.com/15135565/138593092-8d76efc2-8bbb-4ea0-934c-4daebecba02d.png)
 
 -   지연 로딩 활용
     ```java
@@ -168,7 +168,7 @@
     }
     ```
 
-![8.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/36934437-7045-44bc-ac54-1790a2666a50/8.png)
+![8](https://user-images.githubusercontent.com/15135565/138593097-1d51d3f3-573b-4b34-8a16-4e8df0ef7eea.png)
 
 ### 1) 프록시와 컬렉션 레퍼
 
@@ -196,7 +196,7 @@
 -   특정 엔티티를 영속 상태로 만들 때 연관된 엔티티도 동시에 영속 상태로 만들고 싶을 때
 -   영속성 전이 기능 사용, JPA는 CASCADE 옵션으로 제공
 
-![9.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/46d21540-84e2-40a8-a0a1-ad46732a690f/9.png)
+![9](https://user-images.githubusercontent.com/15135565/138593099-6f72d96a-8017-4dfc-95f9-f4d9e54588d2.png)
 
 ### 1) 영속성 전이 : 저장
 
