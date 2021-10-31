@@ -89,7 +89,7 @@ JPQL에서 성능 최적화를 위해 제공하는 기능
 select m from Member m join fetch m.team
 ```
 
-![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ceaa10c7-59ea-474f-a23a-a0cc4c5b24e2/1.png)
+![1](https://user-images.githubusercontent.com/15135565/139564104-cb57bb10-e4ec-4ae4-80fc-013a4f902417.png)
 
 지연 로딩이 발생하지 않음
 
@@ -473,9 +473,10 @@ int resultCount = em
 
 벌크 연산은 영속성 컨텍스트를 무시하고 데이터베이스에 직접 쿼리한다는 점에 주의
 
-![3.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1e80aa23-2cc4-4144-9e6d-52812d5047f1/3.png)
+![3](https://user-images.githubusercontent.com/15135565/139564112-42537648-2f3f-4bab-af91-7d8b2790c74f.png)
 
-![4.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3c528219-2f76-4d09-aad9-69d437d5aaff/4.png)
+![4](https://user-images.githubusercontent.com/15135565/139564113-268e1e07-7a29-430e-b18a-4d5a38d1606f.png)
+
 
 해결 방법은 `em.refresh()` 사용, 벌크 연산 먼저 실행, 벌크 연산 수행 후 영속성 컨텍스트 초기화
 
@@ -514,7 +515,7 @@ em.setFlushMode(FlushModeType.COMMIT); // 커밋시에만 플러시
 
 JPQL은 영속성 컨텍스트를 고려하지 않는다. 따라서 JPQL을 실행하기 전에 영속성 컨텍스트의 내용을 데이터베이스에 반영해야 한다.
 
-![6.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8baa821b-e0be-4967-91f8-80a0684cde4a/6.png)
+![6](https://user-images.githubusercontent.com/15135565/139564115-65d4206f-d496-4567-a139-5a7dab6c576e.png)
 
 플러시 모드가 AUTO일 경우 JPQL이 실행되면 플러시가 먼저 자동으로 호출되서 데이터베이스에 반영되지만, COMMIT일 경우 반영되지 않음
 
