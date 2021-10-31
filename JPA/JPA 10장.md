@@ -185,7 +185,7 @@ List<Member> resultList = em.createNamedQuery("Member.findByUsername", Member.cl
 
 Named 쿼리를 어노테이션 대신 XML로도 작성 가능
 
-# 🔫Criteria
+# 🔫 Criteria
 
 - JPQL을 생성하는 빌더 클래스
 - 문자가 아닌 프로그래밍 코드로 JPQL을 작성할 수 있다. 런타임 에러에서 컴파일 에러로 탐지 가능
