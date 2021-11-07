@@ -33,7 +33,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
 ## 3. 공통 인터페이스 기능
 
-![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/651e95cc-2787-4113-a44f-f85f0753ecfb/1.png)
+![1](https://user-images.githubusercontent.com/15135565/140630048-ace407c4-5a88-4c31-9947-037cba9ab2ed.png)
 
 - save(S) : 새로운 엔티티는 저장하고 이미 있는 엔티티는 수정한다.
 - delete(T) : 엔티티 하나를 삭제한다. 내부에서 EntityManager.remove() 호출
